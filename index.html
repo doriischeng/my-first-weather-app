@@ -20,33 +20,45 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Hong Kong</h1>
-      <div class="row">
-        <div class="col-6">
-          <ul>
-            <li>Thursday 20:25</li>
-            <li>Partly Cloudy</li>
-            <li>Humidity: 84%, Wind:11km/h</li>
-          </ul>
-        </div>
+    <div class="container weather-app-wrapper">
+      <div class="container weather-app">
+        <h1>Hong Kong</h1>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li>Thursday 20:25</li>
+              <li>Partly Cloudy</li>
+              <li>Humidity: 84%, Wind:11km/h</li>
+            </ul>
+          </div>
 
-        <div class="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="cloudy"
-          />
-          26°C |°F
+          <div class="col-6">
+            <div
+              class="d-flex weather-temperature"
+            >
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="cloudy"
+                id="icon"
+              />
+              <div>
+                <strong id="temperature"></strong>26</strong
+                ><span class="units">
+                  °C | <a href="#"> °F </a></span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <small
+        ><a
+          href="https://github.com/doriischeng/my-first-weather-app"
+          target="_blank"
+          >Open source code </a
+        >by Doris Cheng</small
+      >
     </div>
     <script src="src/app.js"></script>
   </body>
-  <small
-    ><a
-      href="https://github.com/doriischeng/my-first-weather-app"
-      target="_blank"
-      >Open source code </a
-    >by Doris Cheng</small
-  >
 </html>
