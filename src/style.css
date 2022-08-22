@@ -12,8 +12,16 @@ li {
   color: grey;
 }
 
-strong {
+a {
+  text-decoration: none;
+}
+#temperature {
   font-size: 72px;
+  font-weight: 600;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
 }
 
 .weather-app-wrapper {
