@@ -34,7 +34,9 @@ a {
   border: 1px solid rgb(186, 186, 186);
   border-radius: 8px;
 }
-
+.form-control {
+  margin-bottom: 20px;
+}
 .units {
   position: relative;
   top: -36px;

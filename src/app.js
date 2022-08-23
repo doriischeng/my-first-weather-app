@@ -65,7 +65,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "4a57d92459ebaebf0556db5aa7e8c670";
-let city = "Paris";
+let city = "Hong Kong";
 let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
