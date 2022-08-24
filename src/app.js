@@ -62,6 +62,8 @@ function displayTemperature(response) {
   dateElement.innerHTML = formattedDate(
     response.data.dt * 1000
   );
+
+  celsiusTemp = response.data.main.temp;
 }
 
 function matchCity(city) {
@@ -79,7 +81,45 @@ function search(event) {
   matchCity(cityInputElement.value);
 }
 
-matchCity("Hong Kong");
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(
+    "#temperature"
+  );
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(
+    fahrenheitTemp
+  );
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(
+    "#temperature"
+  );
+  temperatureElement.innerHTML =
+    Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#searchCity");
 form.addEventListener("submit", search);
+
+let fahrenheitLink = document.querySelector(
+  "#fahrenheit-link"
+);
+fahrenheitLink.addEventListener(
+  "click",
+  showFahrenheit
+);
+
+let celsiusLink = document.querySelector(
+  "#celsius-link"
+);
+celsiusLink.addEventListener(
+  "click",
+  showCelsius
+);
+
+matchCity("Hong Kong");
