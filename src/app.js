@@ -64,9 +64,20 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "4a57d92459ebaebf0556db5aa7e8c670";
-let city = "Hong Kong";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+function matchCity(city) {
+  let apiKey = "4a57d92459ebaebf0556db5aa7e8c670";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function search(event) {
+  event.preventDefault();
+  let cityInputElement =
+    document.querySelector("#cityInput");
+  matchCity(cityInputElement.value);
+}
+
+let form = document.querySelector("#searchCity");
+form.addEventListener("submit", search);
