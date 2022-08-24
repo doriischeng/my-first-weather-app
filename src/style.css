@@ -55,3 +55,12 @@ a {
   width: 68px;
   margin-right: 10px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  color: black;
+}
