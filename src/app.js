@@ -79,5 +79,7 @@ function search(event) {
   matchCity(cityInputElement.value);
 }
 
+matchCity("Hong Kong");
+
 let form = document.querySelector("#searchCity");
 form.addEventListener("submit", search);
