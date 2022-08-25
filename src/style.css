@@ -15,14 +15,6 @@ li {
 a {
   text-decoration: none;
 }
-#temperature {
-  font-size: 72px;
-  font-weight: 600;
-}
-
-#description:first-letter {
-  text-transform: capitalize;
-}
 
 .weather-app-wrapper {
   max-width: 600px;
@@ -63,4 +55,26 @@ a {
 
 .active:hover {
   color: black;
+}
+
+.forecast-temp-max {
+  font-size: 15px;
+}
+
+.forecast-temp-min {
+  font-size: 15px;
+  color: gray;
+}
+
+#temperature {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
+}
+
+#weather-forecast {
+  text-align: center;
 }
