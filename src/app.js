@@ -105,6 +105,39 @@ function showCelsius(event) {
     Math.round(celsiusTemp);
 }
 
+function displayForecast() {
+  let forecastElement =
+    document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div
+              class="col-2"
+              id="display-forecast"
+            >
+              <div class="forecast-date">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                width="64px"
+              />
+              <span class="forecast-temp-max"
+                >18</span
+              >
+              <span class="forecast-temp-min"
+                >12</span
+              >
+            </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#searchCity");
@@ -127,3 +160,4 @@ celsiusLink.addEventListener(
 );
 
 matchCity("Hong Kong");
+displayForecast();
